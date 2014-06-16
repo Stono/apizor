@@ -1,0 +1,70 @@
+{
+  "name": "apizor",
+  "description": "A mock API server based on Snow Crash doco",
+  "version": "0.1.0",
+  "homepage": "https://github.com/Stono/apizor",
+  "author": {
+    "name": "Karl Stoney",
+    "email": "karl@jambr.co.uk"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Stono/apizor.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Stono/apizor/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/Stono/apizor/blob/master/LICENSE-MIT"
+    }
+  ],
+  "main": "lib/apizor",
+  "engines": {
+    "node": ">= 0.8.0"
+  },
+  "devDependencies": {
+    "brfs": "^1.1.1",
+    "browserify": "^4.1.9",
+    "browserify-shim": "^3.5.0",
+    "domready": "^1.0.5",
+    "grunt": "^0.4.5",
+    "grunt-contrib-jshint": "^0.10.0",
+    "grunt-contrib-copy": "^0.5.0",
+    "grunt-contrib-clean": "^0.5.0",
+    "grunt-contrib-watch": "^0.6.1",
+    "uglify-js": "^2.4.13",
+    "grunt-notify": "^0.3.0",
+    "jshint": "^2.5.1",
+    "grunt-contrib-cssmin": "^0.9.0",
+    "grunt-contrib-uglify": "^0.4.0",
+    "grunt-browserify": "^2.1.0",
+    "express": "^4.4.2",
+    "morgan": "^1.1.1",
+    "location-bar": "^2.0.0",
+    "moment": "^2.6.0",
+    "node-guid": "^0.0.3"
+  },
+  "keywords": [],
+  "browserify-shim": "./shim.js",
+  "browser": {
+    "bootstrap": "./static/js/bootstrap.js",
+    "bootstrapSelect": "./static/js/bootstrap-select.js",
+    "jquery": "./static/js/jquery.js",
+    "qunit": "./static/js/qunit.js"
+  },
+  "browserify": {
+    "transform": [
+      "browserify-shim"
+    ]
+  },
+  "scripts": {
+    "start": "grunt build && node server.js"
+  },
+  "dependencies": {
+    "protagonist": "~0.11.0",
+    "jade": "~1.3.1",
+    "knockout": "~3.1.0"
+  }
+}
