@@ -44,7 +44,8 @@
     "morgan": "^1.1.1",
     "location-bar": "^2.0.0",
     "moment": "^2.6.0",
-    "node-guid": "^0.0.3"
+    "node-guid": "^0.0.3",
+    "grunt-mocha-test": "^0.11.0"
   },
   "keywords": [],
   "browserify-shim": "./shim.js",

@@ -20219,7 +20219,7 @@ exports.describe_ast = function () {
 },{"source-map":47,"util":"gCDE++"}],"bomxv6":[function(require,module,exports){
 (function (global){
 
-; jQuery = global.jQuery = require("/home/karl/development/git/github/apizor/static/js/jquery.js");
+; jQuery = global.jQuery = require("/home/karl/development/apizor/static/js/jquery.js");
 ;__browserify_shim_require__=require;(function browserifyShim(module, define, require) {
 /*!
  * bootstrap-select v1.3.5
@@ -20951,14 +20951,12 @@ exports.describe_ast = function () {
 }).call(global, module, undefined, undefined);
 
 }).call(this,typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"/home/karl/development/git/github/apizor/static/js/jquery.js":"ywmwtX"}],"bootstrapSelect":[function(require,module,exports){
+},{"/home/karl/development/apizor/static/js/jquery.js":"ywmwtX"}],"bootstrapSelect":[function(require,module,exports){
 module.exports=require('bomxv6');
-},{}],"bootstrap":[function(require,module,exports){
-module.exports=require('Ni+Zb7');
 },{}],"Ni+Zb7":[function(require,module,exports){
 (function (global){
 
-; jQuery = global.jQuery = require("/home/karl/development/git/github/apizor/static/js/jquery.js");
+; jQuery = global.jQuery = require("/home/karl/development/apizor/static/js/jquery.js");
 ;__browserify_shim_require__=require;(function browserifyShim(module, exports, require, define, browserify_shim__define__module__export__) {
 /*!
  * Bootstrap v3.1.1 (http://getbootstrap.com)
@@ -22917,7 +22915,9 @@ if (typeof jQuery === 'undefined') { throw new Error('Bootstrap\'s JavaScript re
 }).call(global, undefined, undefined, undefined, undefined, function defineExport(ex) { module.exports = ex; });
 
 }).call(this,typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"/home/karl/development/git/github/apizor/static/js/jquery.js":"ywmwtX"}],"ywmwtX":[function(require,module,exports){
+},{"/home/karl/development/apizor/static/js/jquery.js":"ywmwtX"}],"bootstrap":[function(require,module,exports){
+module.exports=require('Ni+Zb7');
+},{}],"ywmwtX":[function(require,module,exports){
 (function (global){
 ;__browserify_shim_require__=require;(function browserifyShim(module, exports, require, define, browserify_shim__define__module__export__) {
 /*!

@@ -2,8 +2,9 @@ var express = require("express");
 var morgan = require("morgan");
 var app = express();
 var fs = require('fs');
+var config = require('./config');
 
-app.set('port', process.env.PORT || 8080);
+app.set('port', config.apizor.port);
 
 app.use(morgan({
   format: 'dev'
@@ -25,5 +26,5 @@ app.get(/^(?!api)(.+)/, function(req, res, next) {
 });
 
 var server = app.listen(app.get('port'), function() {
-  console.log('Server started on port:' + server.address().port);
+  console.log('Server started on port:', server.address().port);
 });

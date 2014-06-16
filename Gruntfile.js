@@ -49,6 +49,14 @@ module.exports = function(grunt) {
         }
       },
     },
+    mochaTest: {
+      unit: {
+        options: {
+          reporter: 'spec'
+        },
+        src: ['test/**/*.js']
+      }
+    },
     clean: {
       'public': {
         src: ['generated', 'public/js', 'public/css', 'public/fonts', 'public/images']
@@ -120,8 +128,11 @@ module.exports = function(grunt) {
       },
       test: {
         src: ['test/**/*.js']
+      },
+      qunit: {
+        src: ['qunit/**/*.js']
       }
-    },
+   },
     watch: {
       core: {
         files: ['shim.js', 'Gruntfile.js', 'package.json'],
@@ -136,8 +147,12 @@ module.exports = function(grunt) {
         tasks: ['uglify:static']
       },
       test: {
-        files: ['test/**/*'],
-        tasks: ['jshint:test', 'browserify:test', 'uglify:test']
+        files: 'test/**/*.js',
+        tasks: ['jshint:test', 'mochaTest']
+      },
+      qunit: {
+        files: ['qunit/**/*'],
+        tasks: ['jshint:qunit', 'browserify:test', 'uglify:test']
       },
       css: {
         files: 'static/css/**/*.css',
@@ -155,8 +170,9 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-browserify');
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-copy');
+  grunt.loadNpmTasks('grunt-mocha-test');
 
   // Default task.
   grunt.registerTask('build', ['clean', 'browserify', 'cssmin', 'uglify', 'copy']);
-  grunt.registerTask('default', ['jshint', 'build']);
+  grunt.registerTask('default', ['jshint', 'mochaTest', 'build']);
 };

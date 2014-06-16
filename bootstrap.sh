@@ -15,8 +15,4 @@ echo "nvm use 0.10" >> /home/vagrant/.bashrc
 cd /opt
 npm install cube
 
-mkdir -p /usr/local/var/log/cube
-node bin/collector.js 2>&1 >> /usr/local/var/log/cube/collector.log &
-node bin/evaluator.js 2>&1 >> /usr/local/var/log/cube/evaluator.log &
-
-echo "Cube Started!"
+sh startcube.sh
